@@ -1,5 +1,7 @@
 target/
 .bsp/
 .cask/
+.metals/
 .bloop/
 project/.bloop/
+project/metals.sbt
