@@ -1,11 +1,12 @@
-ThisBuild / scalaVersion     := "2.13.8"
-ThisBuild / version          := "0.1.0-SNAPSHOT"
-ThisBuild / organization     := "io.siever"
-ThisBuild / organizationName := "siever"
+ThisBuild / scalaVersion := "2.13.8"
+ThisBuild / version := "0.1.0-SNAPSHOT"
 
 lazy val root = (project in file("."))
   .settings(
     name := "Ensime LSP",
-    libraryDependencies += Dependencies.lsp4j 
+    libraryDependencies += Dependencies.lsp4j
   )
 
+enablePlugins(AssemblyPlugin)
+
+mainClass in assembly := Some("ensimelsp.Main")
